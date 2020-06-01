@@ -1,0 +1,591 @@
+!************280kA电解槽二维模型热场*********
+
+/CLEAR,START
+
+/prep7
+alls
+
+!*********0.定义单元*************
+ET,1,plane67       !2D thermo-electro
+ET,2,plane55       !2D thermo
+
+!*********1.几何尺寸参数**********
+!槽宽度ok
+Cll_wd=2020e-3
+
+!槽膛宽度 ok
+Cv_wd=1940e-3
+
+!第一层内衬：硅酸钙板 ok
+Lining1_hg=100e-3
+
+!第二层内衬：保温砖 耐高温硅酸钙板 ok
+Lining2_hg=66e-3
+
+!第三层内衬：隔热耐火砖 ok
+Lining3_hg=66e-3
+
+!第四层内衬：防渗料 ok
+Lining4_hg=185e-3
+
+!阴极钢棒高度ok
+Cllb_hg=180e-3
+
+!阴极钢棒长度 ok
+Cllb_wd=2130e-3
+
+!阴极钢棒糊高度 ok
+Clpt_hg=20e-3
+
+!阴极炭块宽度 ok
+Cth_wd=1680e-3
+
+!阴极炭块高度 ok
+Cth_hg=450e-3
+
+!侧部炭块高度
+Scb_hg=820e-3
+
+!侧部炭块宽度 ok
+Scb_wd=80e-3
+
+!捣固糊高度 ok
+dgh_hg=550e-3
+
+!捣固糊上宽 ok
+dgh_wd=50e-3
+
+!捣固糊下宽 ok
+dgh_wd_dwn=260e-3
+
+!阳极宽度 ok
+And_wd=1550e-3
+
+!阳极高度 ok
+And_hg=370e-3 
+
+!阳极距中心线 ok
+Ad_2ad=90e-3
+
+!阳极距离侧部炭块，大面加工距离 ok
+Swr_wd=300e-3
+
+!阳极钢棒插入阳极深度 ok
+And_in=100e-3
+
+!钢爪间距 ok
+Rod_2rod=300e-3
+
+!钢爪高度 ok
+Rod_hg=280e-3
+
+!钢爪宽度 ok
+Rod_dia=150e-3
+
+!钢爪梁高度 ok
+Beam_hg=150e-3
+
+!横梁宽度
+Beam_Wd=1050e-3
+
+
+!铝导杆宽 ok
+Alrod_wd=150e-3
+
+!铝导杆高度 ok
+Alrod_hg=400e-3
+
+!氧化铝覆盖料厚度ok
+Al2O3_hg=175e-3
+
+!铝水平 ok
+Alu_hg=200e-3            
+
+!电解质水平 ok
+Elu_hg=175e-3   
+
+!极距 ok
+ACD=45e-3
+
+!******3.对流换热系数的设定********
+!温度补偿 ok
+TOFFST,273  
+
+!熔体温度 ok
+Tb=950
+
+!环境温度 ok
+Ta=35
+
+!烟气温度，氧化铝覆盖料上面的温度 ok
+Td=97
+
+!熔体区与外界对流换热系数 ok
+conv_sdt=20   
+
+!阴极棒区与外界的对流换热系数 ok
+conv_bar=10
+
+!耐火及保温区与外界的对流换热系数 ok
+conv_sdb=20
+
+!炉底与外界的对流换热系数 ok
+conv_bt=10
+
+!炉顶与外界的对流换热系数 ok
+conv_tp=25
+
+
+                                                           
+!********4.建立几何模型***********
+!内衬建模ok
+rectang,0,Cll_wd,0,Lining1_hg
+rectang,0,Cll_wd,0,Lining1_hg+Lining2_hg
+rectang,0,Cll_wd,0,Lining1_hg+Lining2_hg+Lining3_hg
+rectang,0,Cll_wd,0,Lining1_hg+Lining2_hg+Lining3_hg+Lining4_hg
+rectang,0,Cllb_wd,Lining1_hg+Lining2_hg+Lining3_hg+Lining4_hg,Lining1_hg+Lining2_hg+Lining3_hg+Lining4_hg+Cllb_hg
+rectang,0,Cll_wd,0,Lining1_hg+Lining2_hg+Lining3_hg+Lining4_hg+Cllb_hg+Clpt_hg
+rectang,0,Cll_wd,0,Lining1_hg+Lining2_hg+Lining3_hg+Lining4_hg+Cth_hg
+
+
+!侧部炭块ok
+rectang,Cll_wd-Scb_wd,Cll_wd,0,Lining1_hg+Lining2_hg+Lining3_hg+Lining4_hg+Cllb_hg+Scb_hg
+
+
+!捣鼓糊 ok
+*get,kpnum,kp,0,count
+k,kpnum+1,Cll_wd-dgh_wd_dwn-Scb_wd,Lining1_hg+Lining2_hg+Lining3_hg+Lining4_hg+Cllb_hg
+k,kpnum+2,Cll_wd-dgh_wd_dwn-Scb_wd,Lining1_hg+Lining2_hg+Lining3_hg+Lining4_hg+Cth_hg
+k,kpnum+3,Cll_wd-dgh_wd-Scb_wd,Lining1_hg+Lining2_hg+Lining3_hg+Lining4_hg+Cllb_hg+dgh_hg
+k,kpnum+4,Cll_wd,Lining1_hg+Lining2_hg+Lining3_hg+Lining4_hg+Cllb_hg+dgh_hg
+k,kpnum+5,Cll_wd,Lining1_hg+Lining2_hg+Lining3_hg+Lining4_hg+Cllb_hg
+a,kpnum+1,kpnum+2,kpnum+3,kpnum+4,kpnum+5
+
+
+!槽帮
+sledg_dw_wd=20e-3+dgh_wd_dwn+Scb_wd
+sledg_dw_hg=Lining1_hg+Lining2_hg+Lining3_hg+Lining4_hg+Cth_hg
+sledg_mid_wd=dgh_wd_dwn+Scb_wd-50e-3
+sledg_mid_hg=sledg_dw_hg+200e-3
+sledg_up_wd=Swr_wd+Scb_wd
+sledg_up_hg=Lining1_hg+Lining2_hg+Lining3_hg+Lining4_hg+Cllb_hg+Scb_hg-Al2O3_hg
+
+*get,kpnum,kp,0,count
+k,kpnum+1,Cll_wd-sledg_dw_wd,sledg_dw_hg
+k,kpnum+2,Cll_wd-sledg_mid_wd,sledg_mid_hg
+k,kpnum+3,Cll_wd-sledg_up_wd,sledg_up_hg
+k,kpnum+4,Cll_wd,sledg_up_hg
+k,kpnum+5,Cll_wd,sledg_dw_hg
+a,kpnum+1,kpnum+2,kpnum+3,kpnum+4,kpnum+5
+
+
+!氧化铝覆盖层厚度 ok
+rectang,0,Cll_wd-Scb_wd,sledg_up_hg,sledg_up_hg+Al2O3_hg
+
+!阳极炭块 ok
+rectang,Ad_2ad,Cll_wd-Swr_wd-Scb_wd,Lining1_hg+Lining2_hg+Lining3_hg+Lining4_hg+Cth_hg+Alu_hg+ACD,Lining1_hg+Lining2_hg+Lining3_hg+Lining4_hg+Cth_hg+Alu_hg+ACD+And_hg
+
+
+!阳极钢爪 ok
+Rod_X=Ad_2ad+(And_wd-Beam_Wd)/2
+Rod_Y=Lining1_hg+Lining2_hg+Lining3_hg+Lining4_hg+Cth_hg+Alu_hg+ACD+And_hg-And_in
+rectang,Rod_X,Rod_X+Rod_dia,Rod_Y,Rod_Y+Rod_hg+Beam_hg
+rectang,Rod_X+Rod_2rod,Rod_X+Rod_2rod+Rod_dia,Rod_Y,Rod_Y+Rod_hg+Beam_hg
+rectang,Rod_X+Rod_2rod*2,Rod_X+Rod_2rod*2+Rod_dia,Rod_Y,Rod_Y+Rod_hg+Beam_hg
+rectang,Rod_X+Rod_2rod*3,Rod_X+Rod_2rod*3+Rod_dia,Rod_Y,Rod_Y+Rod_hg+Beam_hg
+rectang,Rod_X,Rod_X+Beam_Wd,Rod_Y+Rod_hg,Rod_Y+Rod_hg+Beam_hg
+rectang,Rod_X+(Beam_Wd-Alrod_wd)/2,Rod_X+(Beam_Wd-Alrod_wd)/2+Alrod_wd,Rod_Y+Rod_hg+Beam_hg,Rod_Y+Rod_hg+Beam_hg+Alrod_hg
+
+
+alls
+aovlap,all
+aglue,all  
+nummrg,kp   
+numcmp,all  
+alls
+
+!***************5.定义各材料属性**************        
+!定义阴极导热系数比电阻
+MPTEMP,1,200,400,600,800,900,1000, 
+
+!1 阴极碳块
+MPDATA,KXX,1,1,10.92,11.84,12.76,13.68,14.14,14.6
+MPDATA,Kyy,1,1,9.04,9.83,10.33,10.68,10.85,10.97
+
+!2 阴极钢棒
+MPDATA,KXX,2,1,16.93,16.06,14.94,13.69,13.09,12.40,
+
+!3 阴极钢棒糊
+MPDATA,KXX,3,1,2.82,3.34,4.74,7.02,8.16,9.30,
+
+!4 阳极炭块
+MPDATA,KXX,4,1,4.3005,4.63041,4.9678,5.3015,5.4683,5.6352
+
+!5 钢爪
+MPDATA,KXX,5,1,64,53.2,42.4,31.6,26.2,20.8,
+
+!6 槽帮 
+MPDATA,KXX,6,1,1.29,1.31,1.34,1.37,1.38,1.39
+
+!7 捣鼓糊
+MPDATA,KXX,7,,0.34
+
+!8 氧化铝覆盖料
+MPDATA,kxx,8,,0.8
+
+!9 第四层内衬：保温防渗料 
+MPDATA,KXX,9,1,0.593,0.867,1.141,1.415,1.552,1.689
+
+!10 第三层内衬：隔热耐火砖
+MPDATA,KXX,10,,0.22
+
+!11 第二层内衬：保温砖
+MPDATA,KXX,11,1,0.15,0.19,0.23,0.27,0.29,0.31  
+
+!12 第一层内衬：硅酸钙(绝热板)
+MPDATA,KXX,12,,0.055
+
+!13 侧部碳块
+MPDATA,KXX,13,1,36.7,30.61,25.25,21.76,20.53,19.47
+
+!14 阳极铝导杆
+MPTEMP,1,50,100,200,300,400,500,
+MPDATA,KXX,14,1,205,206,213,229,248,268   
+
+
+!***************6.将各面定义为不同的材料**************   
+ESIZE,0.01,0,  
+
+CM,_Y,AREA  
+ASEL, , , ,      49 
+CM,_Y1,AREA 
+CMSEL,S,_Y  
+CMSEL,S,_Y1 
+AATT,       1, ,   2,       0,  
+CMSEL,S,_Y  
+CMDELE,_Y   
+CMDELE,_Y1  
+
+
+FLST,5,3,5,ORDE,3   
+FITEM,5,3   
+FITEM,5,23  
+FITEM,5,48  
+CM,_Y,AREA  
+ASEL, , , ,P51X 
+CM,_Y1,AREA 
+CMSEL,S,_Y  
+CMSEL,S,_Y1 
+AATT,       2, ,   2,       0,  
+CMSEL,S,_Y  
+CMDELE,_Y   
+CMDELE,_Y1
+
+CM,_Y,AREA  
+ASEL, , , ,      24 
+CM,_Y1,AREA 
+CMSEL,S,_Y  
+CMSEL,S,_Y1 
+AATT,       3, ,   2,       0,  
+CMSEL,S,_Y  
+CMDELE,_Y   
+CMDELE,_Y1  
+
+FLST,5,7,5,ORDE,7   
+FITEM,5,7   
+FITEM,5,32  
+FITEM,5,-33 
+FITEM,5,40  
+FITEM,5,42  
+FITEM,5,44  
+FITEM,5,51  
+CM,_Y,AREA  
+ASEL, , , ,P51X 
+CM,_Y1,AREA 
+CMSEL,S,_Y  
+CMSEL,S,_Y1 
+AATT,       4, ,   2,       0,  
+CMSEL,S,_Y  
+CMDELE,_Y   
+CMDELE,_Y1  
+
+FLST,5,19,5,ORDE,8  
+FITEM,5,8   
+FITEM,5,-15 
+FITEM,5,34  
+FITEM,5,-39 
+FITEM,5,41  
+FITEM,5,43  
+FITEM,5,45  
+FITEM,5,-47 
+CM,_Y,AREA  
+ASEL, , , ,P51X 
+CM,_Y1,AREA 
+CMSEL,S,_Y  
+CMSEL,S,_Y1 
+AATT,       5, ,   2,       0,  
+CMSEL,S,_Y  
+CMDELE,_Y   
+CMDELE,_Y1  
+
+CM,_Y,AREA  
+ASEL, , , ,      50 
+CM,_Y1,AREA 
+CMSEL,S,_Y  
+CMSEL,S,_Y1 
+AATT,       6, ,   2,       0,  
+CMSEL,S,_Y  
+CMDELE,_Y   
+CMDELE,_Y1  
+
+FLST,5,3,5,ORDE,3   
+FITEM,5,5   
+FITEM,5,29  
+FITEM,5,-30 
+CM,_Y,AREA  
+ASEL, , , ,P51X 
+CM,_Y1,AREA 
+CMSEL,S,_Y  
+CMSEL,S,_Y1 
+AATT,       7, ,   2,       0,  
+CMSEL,S,_Y  
+CMDELE,_Y   
+CMDELE,_Y1
+
+FLST,5,2,5,ORDE,2   
+FITEM,5,6   
+FITEM,5,28  
+CM,_Y,AREA  
+ASEL, , , ,P51X 
+CM,_Y1,AREA 
+CMSEL,S,_Y  
+CMSEL,S,_Y1 
+AATT,       8, ,   2,       0,  
+CMSEL,S,_Y  
+CMDELE,_Y   
+CMDELE,_Y1
+
+FLST,5,2,5,ORDE,2   
+FITEM,5,21  
+FITEM,5,-22 
+CM,_Y,AREA  
+ASEL, , , ,P51X 
+CM,_Y1,AREA 
+CMSEL,S,_Y  
+CMSEL,S,_Y1 
+AATT,       9, ,   2,       0,  
+CMSEL,S,_Y  
+CMDELE,_Y   
+CMDELE,_Y1 
+
+FLST,5,2,5,ORDE,2   
+FITEM,5,19  
+FITEM,5,-20 
+CM,_Y,AREA  
+ASEL, , , ,P51X 
+CM,_Y1,AREA 
+CMSEL,S,_Y  
+CMSEL,S,_Y1 
+AATT,      10, ,   2,       0,  
+CMSEL,S,_Y  
+CMDELE,_Y   
+CMDELE,_Y1 
+
+FLST,5,2,5,ORDE,2   
+FITEM,5,17  
+FITEM,5,-18 
+CM,_Y,AREA  
+ASEL, , , ,P51X 
+CM,_Y1,AREA 
+CMSEL,S,_Y  
+CMSEL,S,_Y1 
+AATT,      11, ,   2,       0,  
+CMSEL,S,_Y  
+CMDELE,_Y   
+CMDELE,_Y1
+
+FLST,5,2,5,ORDE,2   
+FITEM,5,1   
+FITEM,5,-2  
+CM,_Y,AREA  
+ASEL, , , ,P51X 
+CM,_Y1,AREA 
+CMSEL,S,_Y  
+CMSEL,S,_Y1 
+AATT,      12, ,   2,       0,  
+CMSEL,S,_Y  
+CMDELE,_Y   
+CMDELE,_Y1 
+
+FLST,5,5,5,ORDE,4   
+FITEM,5,4   
+FITEM,5,25  
+FITEM,5,-27 
+FITEM,5,31  
+CM,_Y,AREA  
+ASEL, , , ,P51X 
+CM,_Y1,AREA 
+CMSEL,S,_Y  
+CMSEL,S,_Y1 
+AATT,      13, ,   2,       0,  
+CMSEL,S,_Y  
+CMDELE,_Y   
+CMDELE,_Y1  
+
+CM,_Y,AREA  
+ASEL, , , ,      16 
+CM,_Y1,AREA 
+CMSEL,S,_Y  
+CMSEL,S,_Y1 
+AATT,      14, ,   2,       0,  
+CMSEL,S,_Y  
+CMDELE,_Y   
+CMDELE,_Y1  
+
+
+
+!***************7.开始网格划分**************      
+MSHKEY,0
+FLST,5,17,5,ORDE,8  
+FITEM,5,1   
+FITEM,5,-3  
+FITEM,5,17  
+FITEM,5,-26 
+FITEM,5,29  
+FITEM,5,-30 
+FITEM,5,48  
+FITEM,5,-49 
+CM,_Y,AREA  
+ASEL, , , ,P51X 
+CM,_Y1,AREA 
+CHKMSH,'AREA'   
+CMSEL,S,_Y  
+AMESH,_Y1    
+CMDELE,_Y   
+CMDELE,_Y1  
+CMDELE,_Y2  
+
+FLST,5,34,5,ORDE,8  
+FITEM,5,4   
+FITEM,5,-16 
+FITEM,5,27  
+FITEM,5,-28 
+FITEM,5,31  
+FITEM,5,-47 
+FITEM,5,50  
+FITEM,5,-51 
+CM,_Y,AREA  
+ASEL, , , ,P51X 
+CM,_Y1,AREA 
+CHKMSH,'AREA'   
+CMSEL,S,_Y  
+AMESH,_Y1   
+CMDELE,_Y   
+CMDELE,_Y1  
+CMDELE,_Y2 
+
+
+!***************8.边界条件**************  
+/SOL
+alls
+LSEL,S,LOC,Y,0  
+cm,line_bt,line                   !槽底部 
+alls
+
+alls
+FLST,5,4,4,ORDE,4   
+FITEM,5,1   
+FITEM,5,66  
+FITEM,5,71  
+FITEM,5,76 
+LSEL,S, , ,P51X 
+cm,line_sdb,line                   !耐火材料保温区 
+ 
+
+alls
+FLST,5,5,4,ORDE,5   
+FITEM,5,3   
+FITEM,5,24  
+FITEM,5,26  
+FITEM,5,87  
+FITEM,5,91
+LSEL,S, , ,P51X 
+cm,line_bar,line                   !阴极与阴极钢棒区 
+
+alls
+FLST,5,2,4,ORDE,2   
+FITEM,5,93  
+FITEM,5,101
+LSEL,S, , ,P51X 
+cm,line_sdt,line                   !熔体区 
+
+
+alls
+FLST,5,21,4,ORDE,21 
+FITEM,5,4   
+FITEM,5,11  
+FITEM,5,13  
+FITEM,5,15  
+FITEM,5,17  
+FITEM,5,-18 
+FITEM,5,27  
+FITEM,5,34  
+FITEM,5,43  
+FITEM,5,60  
+FITEM,5,64  
+FITEM,5,-65 
+FITEM,5,95  
+FITEM,5,103 
+FITEM,5,-104
+FITEM,5,107 
+FITEM,5,-108
+FITEM,5,111 
+FITEM,5,114 
+FITEM,5,116 
+FITEM,5,119
+LSEL,S, , ,P51X 
+cm,line_tp,line                !顶部  
+
+
+alls
+cmsel,s,line_bt 
+SFL,all,CONV,conv_bt, ,Ta,            !炉底
+allsel,all,line
+
+cmsel,s,line_sdt 
+SFL,all,CONV,conv_sdt, ,Ta,           !熔体区 
+allsel,all,line
+
+cmsel,s,line_bar 
+SFL,all,CONV,conv_bar, ,Ta,           !阴极区
+allsel,all,line
+
+cmsel,s,line_sdb 
+SFL,all,CONV,conv_sdb, ,Ta,           !耐火及保温区 
+allsel,all,line
+
+alls
+cmsel,s,line_tp 
+SFL,all,CONV,conv_tp, ,Td,      !炉顶
+
+
+alls
+FLST,2,7,4,ORDE,7   
+FITEM,2,6   
+FITEM,2,-7  
+FITEM,2,9   
+FITEM,2,33  
+FITEM,2,36  
+FITEM,2,38  
+FITEM,2,142 
+DL,P51X, ,TEMP,Tb,0 
+
+alls
+
+!***************9.热场求解**************  
+SOLVE   
+
+
+!***************10.结果后处理**************  
+PLNSOL, TEMP,, 0
+

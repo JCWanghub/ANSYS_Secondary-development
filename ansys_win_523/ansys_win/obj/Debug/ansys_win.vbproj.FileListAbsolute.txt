@@ -1,0 +1,72 @@
+D:\ansys_re\ansys_win\ansys_win\bin\Debug\ansys_win.exe.config
+D:\ansys_re\ansys_win\ansys_win\bin\Debug\ansys_win.exe
+D:\ansys_re\ansys_win\ansys_win\bin\Debug\ansys_win.pdb
+D:\ansys_re\ansys_win\ansys_win\bin\Debug\ansys_win.xml
+D:\ansys_re\ansys_win\ansys_win\obj\Debug\ansys_win.vbprojAssemblyReference.cache
+D:\ansys_re\ansys_win\ansys_win\obj\Debug\ansys_win.主界面Form.resources
+D:\ansys_re\ansys_win\ansys_win\obj\Debug\ansys_win.Resources.resources
+D:\ansys_re\ansys_win\ansys_win\obj\Debug\ansys_win.vbproj.GenerateResource.cache
+D:\ansys_re\ansys_win\ansys_win\obj\Debug\ansys_win.exe
+D:\ansys_re\ansys_win\ansys_win\obj\Debug\ansys_win.xml
+D:\ansys_re\ansys_win\ansys_win\obj\Debug\ansys_win.pdb
+D:\ansys_re\ansys_win\ansys_win\obj\Debug\ansys_win.帮助Form.resources
+D:\ansys_re\ansys_win\ansys_win\bin\Debug\Interop.MSComDlg.dll
+D:\ansys_re\ansys_win\ansys_win\bin\Debug\AxInterop.MSComDlg.dll
+D:\ansys_re\ansys_win\ansys_win\obj\Debug\Interop.MSComDlg.dll
+D:\ansys_re\ansys_win\ansys_win\obj\Debug\AxInterop.MSComDlg.dll
+D:\ansys_re\ansys_win\ansys_win\obj\Debug\ansys_win.vbproj.ResolveComReference.cache
+D:\ansys_re\ansys_win\ansys_win\obj\Debug\ansys_win.vbproj.CoreCompileInputs.cache
+D:\ansys_re\ansys_win - 副本 (2)\ansys_win\obj\Debug\ansys_win.vbprojAssemblyReference.cache
+D:\ansys_re\ansys_win - 副本 (2)\ansys_win\obj\Debug\Interop.MSComDlg.dll
+D:\ansys_re\ansys_win - 副本 (2)\ansys_win\obj\Debug\AxInterop.MSComDlg.dll
+D:\ansys_re\ansys_win - 副本 (2)\ansys_win\obj\Debug\ansys_win.vbproj.ResolveComReference.cache
+D:\ansys_re\ansys_win - 副本 (2)\ansys_win\obj\Debug\ansys_win.主界面Form.resources
+D:\ansys_re\ansys_win - 副本 (2)\ansys_win\obj\Debug\ansys_win.Resources.resources
+D:\ansys_re\ansys_win - 副本 (2)\ansys_win\obj\Debug\ansys_win.帮助Form.resources
+D:\ansys_re\ansys_win - 副本 (2)\ansys_win\obj\Debug\ansys_win.vbproj.GenerateResource.cache
+D:\ansys_re\ansys_win - 副本 (2)\ansys_win\obj\Debug\ansys_win.vbproj.CoreCompileInputs.cache
+D:\ansys_re\ansys_win - 副本 (2)\ansys_win\obj\Debug\ansys_win.exe
+D:\ansys_re\ansys_win - 副本 (2)\ansys_win\obj\Debug\ansys_win.xml
+D:\ansys_re\ansys_win - 副本 (2)\ansys_win\obj\Debug\ansys_win.pdb
+D:\ansys_re\ansys_win - 副本 (2)\ansys_win\bin\Debug\ansys_win.exe.config
+D:\ansys_re\ansys_win - 副本 (2)\ansys_win\bin\Debug\ansys_win.exe
+D:\ansys_re\ansys_win - 副本 (2)\ansys_win\bin\Debug\ansys_win.pdb
+D:\ansys_re\ansys_win - 副本 (2)\ansys_win\bin\Debug\ansys_win.xml
+D:\ansys_re\ansys_win - 副本 (2)\ansys_win\bin\Debug\Interop.MSComDlg.dll
+D:\ansys_re\ansys_win - 副本 (2)\ansys_win\bin\Debug\AxInterop.MSComDlg.dll
+D:\ansys_re\ansys_win - 版本3\ansys_win\bin\Debug\ansys_win.exe.config
+D:\ansys_re\ansys_win - 版本3\ansys_win\bin\Debug\ansys_win.exe
+D:\ansys_re\ansys_win - 版本3\ansys_win\bin\Debug\ansys_win.pdb
+D:\ansys_re\ansys_win - 版本3\ansys_win\bin\Debug\ansys_win.xml
+D:\ansys_re\ansys_win - 版本3\ansys_win\bin\Debug\Interop.MSComDlg.dll
+D:\ansys_re\ansys_win - 版本3\ansys_win\bin\Debug\AxInterop.MSComDlg.dll
+D:\ansys_re\ansys_win - 版本3\ansys_win\obj\Debug\ansys_win.vbprojAssemblyReference.cache
+D:\ansys_re\ansys_win - 版本3\ansys_win\obj\Debug\Interop.MSComDlg.dll
+D:\ansys_re\ansys_win - 版本3\ansys_win\obj\Debug\AxInterop.MSComDlg.dll
+D:\ansys_re\ansys_win - 版本3\ansys_win\obj\Debug\ansys_win.vbproj.ResolveComReference.cache
+D:\ansys_re\ansys_win - 版本3\ansys_win\obj\Debug\ansys_win.主界面Form.resources
+D:\ansys_re\ansys_win - 版本3\ansys_win\obj\Debug\ansys_win.Resources.resources
+D:\ansys_re\ansys_win - 版本3\ansys_win\obj\Debug\ansys_win.帮助Form.resources
+D:\ansys_re\ansys_win - 版本3\ansys_win\obj\Debug\ansys_win.vbproj.GenerateResource.cache
+D:\ansys_re\ansys_win - 版本3\ansys_win\obj\Debug\ansys_win.vbproj.CoreCompileInputs.cache
+D:\ansys_re\ansys_win - 版本3\ansys_win\obj\Debug\ansys_win.exe
+D:\ansys_re\ansys_win - 版本3\ansys_win\obj\Debug\ansys_win.xml
+D:\ansys_re\ansys_win - 版本3\ansys_win\obj\Debug\ansys_win.pdb
+D:\ansys_re\ansys_win - 版本4-1\ansys_win\bin\Debug\ansys_win.exe.config
+D:\ansys_re\ansys_win - 版本4-1\ansys_win\bin\Debug\ansys_win.exe
+D:\ansys_re\ansys_win - 版本4-1\ansys_win\bin\Debug\ansys_win.pdb
+D:\ansys_re\ansys_win - 版本4-1\ansys_win\bin\Debug\ansys_win.xml
+D:\ansys_re\ansys_win - 版本4-1\ansys_win\bin\Debug\Interop.MSComDlg.dll
+D:\ansys_re\ansys_win - 版本4-1\ansys_win\bin\Debug\AxInterop.MSComDlg.dll
+D:\ansys_re\ansys_win - 版本4-1\ansys_win\obj\Debug\ansys_win.vbprojAssemblyReference.cache
+D:\ansys_re\ansys_win - 版本4-1\ansys_win\obj\Debug\Interop.MSComDlg.dll
+D:\ansys_re\ansys_win - 版本4-1\ansys_win\obj\Debug\AxInterop.MSComDlg.dll
+D:\ansys_re\ansys_win - 版本4-1\ansys_win\obj\Debug\ansys_win.vbproj.ResolveComReference.cache
+D:\ansys_re\ansys_win - 版本4-1\ansys_win\obj\Debug\ansys_win.主界面Form.resources
+D:\ansys_re\ansys_win - 版本4-1\ansys_win\obj\Debug\ansys_win.Resources.resources
+D:\ansys_re\ansys_win - 版本4-1\ansys_win\obj\Debug\ansys_win.帮助Form.resources
+D:\ansys_re\ansys_win - 版本4-1\ansys_win\obj\Debug\ansys_win.vbproj.GenerateResource.cache
+D:\ansys_re\ansys_win - 版本4-1\ansys_win\obj\Debug\ansys_win.vbproj.CoreCompileInputs.cache
+D:\ansys_re\ansys_win - 版本4-1\ansys_win\obj\Debug\ansys_win.exe
+D:\ansys_re\ansys_win - 版本4-1\ansys_win\obj\Debug\ansys_win.xml
+D:\ansys_re\ansys_win - 版本4-1\ansys_win\obj\Debug\ansys_win.pdb

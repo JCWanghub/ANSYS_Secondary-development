@@ -1,0 +1,508 @@
+/PREP7  
+!*  
+ET,1,PLANE230   
+!*  
+!*  
+MPTEMP,,,,,,,,  
+MPTEMP,1,0  
+MPDATA,RSVX,1,,2.34e-7  
+MPTEMP,,,,,,,,  
+MPTEMP,1,0  
+MPDATA,RSVX,2,,5.52e-7  
+MPTEMP,,,,,,,,  
+MPTEMP,1,0  
+MPDATA,RSVX,3,,4.553e-7 
+MPTEMP,,,,,,,,  
+MPTEMP,1,0  
+MPDATA,RSVX,4,,1.2e-3   
+MPTEMP,,,,,,,,  
+MPTEMP,1,0  
+MPDATA,RSVX,5,,2.45e-7  
+MPTEMP,,,,,,,,  
+MPTEMP,1,0  
+MPDATA,RSVX,6,,56.6e-6  
+MPTEMP,,,,,,,,  
+MPTEMP,1,0  
+MPDE,RSVX,6 
+MPDATA,RSVX,6,,5.65e-6 
+MPTEMP,,,,,,,,  
+MPTEMP,1,0  
+MPDATA,RSVX,7,,4.781e-7 
+MPTEMP,,,,,,,,  
+MPTEMP,1,0  
+MPDATA,RSVX,8,,5e10 
+
+!婵¤尪妫勯鏃€鎯旈々鏄?  
+*SET,Cll_wd,2020e-3 
+!婵℃彃鈧喎鏅介悗纭呮鐎?ok 
+*SET,Cv_wd,1940e-3  
+!缂佹鍏涚粩瀵镐沪閸屾艾鏁堕悶娑卞墾缁辨壆娑甸崨鏉戞倎闂佽姤鐟﹀?ok  
+*SET,Lining1_hg,100e-3  
+!缂佹鍏涚花鈺冧沪閸屾艾鏁堕悶娑卞墾缁辩増绌卞┑鍥﹀垔闁?闁肩増鍔欓悵顔笺€掗埡鍐炬敯闂佺増鎮傞幐瀣级?ok 
+*SET,Lining2_hg,66e-3   
+!缂佹鍏涚粭浣轰沪閸屾艾鏁堕悶娑卞墾缁变即姊鹃弮鍌氬姲闁肩増鍔楁导鈧柣?ok
+*SET,Lining3_hg,66e-3   
+!缂佹鍓欏ú鎾朵沪閸屾艾鏁堕悶娑卞墾缁变即姊奸崣澶岀懖闁?ok   
+*SET,Lining4_hg,185e-3  
+!闂傚啫鐡ㄩ悗顒勬煢閵忊槅妫楀Δ鍌浢€圭k 
+*SET,Cllb_hg,180e-3 
+!闂傚啫鐡ㄩ悗顒勬煢閵忊槅妫楅梻鈧崹顔碱唺 ok  
+*SET,Cllb_wd,2130e-3
+!闂傚啫鐡ㄩ悗顒勬煢閵忊槅妫楃紒顖氾躬閻濐喗鎯?ok   
+*SET,Clpt_hg,20e-3  
+!闂傚啫鐡ㄩ悗顒勬倷椤撶偞鍋ラ悗纭呮鐎?ok 
+*SET,Cth_wd,1680e-3 
+!闂傚啫鐡ㄩ悗顒勬倷椤撶偞鍋ュΔ鍌浢€?ok  
+*SET,Cth_hg,450e-3  
+!濞撴皜鍥у姤闁绘劦鍘煎鈩冾殗濡搫顔?
+*SET,Scb_hg,820e-3  
+!濞撴皜鍥у姤闁绘劦鍘煎锛勨偓纭呮鐎?ok 
+*SET,Scb_wd,80e-3   
+!闁圭櫢绲藉ù鎰寲婵犲洨褰幖?ok  
+*SET,dgh_hg,550e-3  
+!闁圭櫢绲藉ù鎰寲婵犱胶鐟愰悗?ok  
+*SET,dgh_wd,50e-3   
+!闁圭櫢绲藉ù鎰寲婵犱胶鐟撻悗?ok  
+*SET,dgh_wd_dwn,260e-3  
+!闂傚啳娅曢悗顒傗偓纭呮鐎?ok 
+*SET,And_wd,1550e-3 
+!闂傚啳娅曢悗顒侇殗濡搫顔?ok 
+*SET,And_hg,370e-3  
+!闂傚啳娅曢悗顒傛崉濠靛懓鍘煫鍥у暟閸?ok 
+*SET,Ad_2ad,90e-3   
+!闂傚啳娅曢悗顒傛崉濠靛牜鐎插〒姘€鍥у姤闁绘劦鍘煎锟犳晬鐏炲浜ｉ梻鍫涘灩婵偛顔忛妷銊х崺缂?ok
+*SET,Swr_wd,300e-3  
+!闂傚啳娅曢悗顒勬煢閵忊槅妫楅柟缁樺笒閸欏棝姊奸搹顐も偓顒€菐閸楃偛顔?ok
+*SET,And_in,100e-3  
+!闂佸鍨婚崺鍛存⒒绾惧鐛?ok 
+*SET,Rod_2rod,300e-3
+!闂佸鍨婚崺鍛殗濡搫顔?ok 
+*SET,Rod_hg,280e-3  
+!闂佸鍨婚崺鍛偓纭呮鐎?ok 
+*SET,Rod_dia,150e-3 
+!闂佸鍨婚崺鍛潖娓氣偓閻濐喗鎯?ok   
+*SET,Beam_hg,150e-3 
+!婵☆垼浜濋。锔锯偓纭呮鐎?   
+*SET,Beam_Wd,1050e-3
+!闂佺偓绻傞閬嶅级閸℃鍟?ok 
+*SET,Alrod_wd,150e-3
+!闂佺偓绻傞閬嶅级閸℃稓褰幖?ok  
+*SET,Alrod_hg,400e-3
+!婵鍐嚙闂佺偓绻嗛々顐︽儎閺嶃劍鐏愰柛妯昏壘鐎圭k
+*SET,Al2O3_hg,175e-3
+!闂佺偓绻冮幐澶愮嵁?ok  
+*SET,Alu_hg,200e-3  
+!闁活澀绲昏閻犳劑鍔嶉幐澶愮嵁?ok  
+*SET,Elu_hg,175e-3  
+!闁哄娴囩粣?ok
+*SET,ACD,45e-3  
+!******3.閻庝絻顫夌粊锕傚箲閵忋垹鍔扮紒顖滅帛閺嗙喖鎯冮崟顕呭晭閻?*******  
+!婵炴挴鏅涚€瑰磭鎮伴妷銉ょ級 ok 
+TOFFST,273  
+!闁绘梹鏌х紞瀣€掗埡浣割唺 ok 
+*SET,Tb,950 
+!闁绘粠鍨伴。銊ャ€掗埡浣割唺 ok 
+*SET,Ta,35  
+!闁绘垹鍠愰惃闈涖€掗埡浣割唺闁挎稑鏈崫鈧柛鏍ㄧ墵閹芥垹鎲伴崱娆愮０闁哄倹鐟ょ粭鍌炴閵忋垺鐣辨繛鎾櫅鐎?ok
+*SET,Td,97  
+!闁绘梹鏌х紞瀣礌鏉炴壆鐟㈠鑸电墱閺咁偆鈧絻顫夌粊锕傚箲閵忋垹鍔扮紒顖滅帛閺?ok   
+*SET,conv_sdt,20
+!闂傚啫鐡ㄩ悗顒€螞閹烘垵闅樺☉鎾抽椤﹀鎮惧畝鈧▓鎴犫偓浣冾潐缁侊箓骞戦姀銏犲姲缂侇垳绮弳?ok 
+*SET,conv_bar,10
+!闁肩増鍔楁导鈧柛娆忥梗缁绘艾銆掗埡浣搁殬濞戞挸楠搁ˇ濠氭偩瀹€鈧▓鎴犫偓浣冾潐缁侊箓骞戦姀銏犲姲缂侇垳绮弳?ok 
+*SET,conv_sdb,20
+!闁绘劕顦花铏▔鎼粹槅妯嗛柣锝呯灱濞堟垹鈧絻顫夌粊锕傚箲閵忋垹鍔扮紒顖滅帛閺?ok   
+*SET,conv_bt,10 
+!闁绘劕顦甸妴濠冪▔鎼粹槅妯嗛柣锝呯灱濞堟垹鈧絻顫夌粊锕傚箲閵忋垹鍔扮紒顖滅帛閺?ok   
+*SET,conv_tp,25 
+!********4.鐎点倛娅ｉ悵娑㈠礄閻樿京绉挎俊顖椻偓宕団偓?**********
+!闁告劕鎳撻垾鏍ь嚈閻戞◥涔穔   
+rectang,0,Cll_wd,0,Lining1_hg   
+rectang,0,Cll_wd,0,Lining1_hg+Lining2_hg
+rectang,0,Cll_wd,0,Lining1_hg+Lining2_hg+Lining3_hg 
+rectang,0,Cll_wd,0,Lining1_hg+Lining2_hg+Lining3_hg+Lining4_hg  
+rectang,0,Cllb_wd,Lining1_hg+Lining2_hg+Lining3_hg+Lining4_hg,Lining1_hg+Lining2_hg+Lining3_hg+Lining4_hg+Cllb_hg   
+rectang,0,Cll_wd,0,Lining1_hg+Lining2_hg+Lining3_hg+Lining4_hg+Cllb_hg+Clpt_hg  
+rectang,0,Cll_wd,0,Lining1_hg+Lining2_hg+Lining3_hg+Lining4_hg+Cth_hg   
+!濞撴皜鍥у姤闁绘劦鍘煎顡祂   
+rectang,Cll_wd-Scb_wd,Cll_wd,0,Lining1_hg+Lining2_hg+Lining3_hg+Lining4_hg+Cllb_hg+Scb_hg   
+!闁圭櫢缍佺槐锔惧寲?ok  
+*get,kpnum,kp,0,count   
+k,kpnum+1,Cll_wd-dgh_wd_dwn-Scb_wd,Lining1_hg+Lining2_hg+Lining3_hg+Lining4_hg+Cllb_hg  
+k,kpnum+2,Cll_wd-dgh_wd_dwn-Scb_wd,Lining1_hg+Lining2_hg+Lining3_hg+Lining4_hg+Cth_hg   
+k,kpnum+3,Cll_wd-dgh_wd-Scb_wd,Lining1_hg+Lining2_hg+Lining3_hg+Lining4_hg+Cllb_hg+dgh_hg   
+k,kpnum+4,Cll_wd,Lining1_hg+Lining2_hg+Lining3_hg+Lining4_hg+Cllb_hg+dgh_hg 
+k,kpnum+5,Cll_wd,Lining1_hg+Lining2_hg+Lining3_hg+Lining4_hg+Cllb_hg
+a,kpnum+1,kpnum+2,kpnum+3,kpnum+4,kpnum+5   
+!婵¤尪妫勬惔?  
+*SET,sledg_dw_wd,20e-3+dgh_wd_dwn+Scb_wd
+*SET,sledg_dw_hg,Lining1_hg+Lining2_hg+Lining3_hg+Lining4_hg+Cth_hg 
+*SET,sledg_mid_wd,dgh_wd_dwn+Scb_wd-50e-3   
+*SET,sledg_mid_hg,sledg_dw_hg+200e-3
+*SET,sledg_up_wd,Swr_wd+Scb_wd  
+*SET,sledg_up_hg,Lining1_hg+Lining2_hg+Lining3_hg+Lining4_hg+Cllb_hg+Scb_hg-Al2O3_hg
+*get,kpnum,kp,0,count   
+k,kpnum+1,Cll_wd-sledg_dw_wd,sledg_dw_hg
+k,kpnum+2,Cll_wd-sledg_mid_wd,sledg_mid_hg  
+k,kpnum+3,Cll_wd-sledg_up_wd,sledg_up_hg
+k,kpnum+4,Cll_wd,sledg_up_hg
+k,kpnum+5,Cll_wd,sledg_dw_hg
+a,kpnum+1,kpnum+2,kpnum+3,kpnum+4,kpnum+5   
+!婵鍐嚙闂佺偓绻嗛々顐︽儎閺嵮呮勾闁告ɑ鑹剧€?ok  
+rectang,0,Cll_wd-Scb_wd,sledg_up_hg,sledg_up_hg+Al2O3_hg
+!闂傚啳娅曢悗顒勬倷椤撶偞鍋?ok 
+rectang,Ad_2ad,Cll_wd-Swr_wd-Scb_wd,Lining1_hg+Lining2_hg+Lining3_hg+Lining4_hg+Cth_hg+Alu_hg+ACD,Lining1_hg+Lining2_hg+Lining3_hg+Lining4_hg+Cth_hg+Alu_hg+ACD+And_hg  
+!闂傚啳娅曢悗顒勬煢閵忋垹鐒?ok 
+*SET,Rod_X,Ad_2ad+(And_wd-Beam_Wd)/2
+*SET,Rod_Y,Lining1_hg+Lining2_hg+Lining3_hg+Lining4_hg+Cth_hg+Alu_hg+ACD+And_hg-And_in  
+rectang,Rod_X,Rod_X+Rod_dia,Rod_Y,Rod_Y+Rod_hg+Beam_hg  
+rectang,Rod_X+Rod_2rod,Rod_X+Rod_2rod+Rod_dia,Rod_Y,Rod_Y+Rod_hg+Beam_hg
+rectang,Rod_X+Rod_2rod*2,Rod_X+Rod_2rod*2+Rod_dia,Rod_Y,Rod_Y+Rod_hg+Beam_hg
+rectang,Rod_X+Rod_2rod*3,Rod_X+Rod_2rod*3+Rod_dia,Rod_Y,Rod_Y+Rod_hg+Beam_hg
+rectang,Rod_X,Rod_X+Beam_Wd,Rod_Y+Rod_hg,Rod_Y+Rod_hg+Beam_hg   
+rectang,Rod_X+(Beam_Wd-Alrod_wd)/2,Rod_X+(Beam_Wd-Alrod_wd)/2+Alrod_wd,Rod_Y+Rod_hg+Beam_hg,Rod_Y+Rod_hg+Beam_hg+Alrod_hg   
+alls
+aovlap,all  
+aglue,all   
+nummrg,kp   
+numcmp,all  
+alls
+LSTR,      29,      17  
+FLST,2,8,4  
+FITEM,2,144 
+FITEM,2,33  
+FITEM,2,38  
+FITEM,2,9   
+FITEM,2,36  
+FITEM,2,7   
+FITEM,2,6   
+FITEM,2,142 
+AL,P51X 
+FLST,2,52,5,ORDE,2  
+FITEM,2,1   
+FITEM,2,-52 
+AGLUE,P51X  
+CM,_Y,AREA  
+ASEL, , , ,      52 
+CM,_Y1,AREA 
+CMSEL,S,_Y  
+FLST,5,20,5,ORDE,8  
+FITEM,5,8   
+FITEM,5,-16 
+FITEM,5,34  
+FITEM,5,-39 
+FITEM,5,41  
+FITEM,5,43  
+FITEM,5,45  
+FITEM,5,-47 
+CM,_Y,AREA  
+ASEL, , , ,P51X 
+CM,_Y1,AREA 
+CMSEL,S,_Y  
+FLST,5,20,5,ORDE,8  
+FITEM,5,8   
+FITEM,5,-16 
+FITEM,5,34  
+FITEM,5,-39 
+FITEM,5,41  
+FITEM,5,43  
+FITEM,5,45  
+FITEM,5,-47 
+CM,_Y,AREA  
+ASEL, , , ,P51X 
+CM,_Y1,AREA 
+CMSEL,S,_Y  
+!*  
+CMSEL,S,_Y1 
+AATT,       1, ,   1,       0,  
+CMSEL,S,_Y  
+CMDELE,_Y   
+CMDELE,_Y1  
+!*  
+FLST,5,7,5,ORDE,7   
+FITEM,5,7   
+FITEM,5,32  
+FITEM,5,-33 
+FITEM,5,40  
+FITEM,5,42  
+FITEM,5,44  
+FITEM,5,51  
+CM,_Y,AREA  
+ASEL, , , ,P51X 
+CM,_Y1,AREA 
+CMSEL,S,_Y  
+!*  
+CMSEL,S,_Y1 
+AATT,       2, ,   1,       0,  
+CMSEL,S,_Y  
+CMDELE,_Y   
+CMDELE,_Y1  
+!*  
+CM,_Y,AREA  
+ASEL, , , ,      52 
+CM,_Y1,AREA 
+CMSEL,S,_Y  
+!*  
+CMSEL,S,_Y1 
+AATT,       3, ,   1,       0,  
+CMSEL,S,_Y  
+CMDELE,_Y   
+CMDELE,_Y1  
+!*  
+FLST,5,5,5,ORDE,4   
+FITEM,5,4   
+FITEM,5,25  
+FITEM,5,-27 
+FITEM,5,31  
+CM,_Y,AREA  
+ASEL, , , ,P51X 
+CM,_Y1,AREA 
+CMSEL,S,_Y  
+!*  
+CMSEL,S,_Y1 
+AATT,       2, ,   1,       0,  
+CMSEL,S,_Y  
+CMDELE,_Y   
+CMDELE,_Y1  
+!*  
+FLST,5,4,5,ORDE,4   
+FITEM,5,5   
+FITEM,5,29  
+FITEM,5,-30 
+FITEM,5,50  
+CM,_Y,AREA  
+ASEL, , , ,P51X 
+CM,_Y1,AREA 
+CMSEL,S,_Y  
+!*  
+CMSEL,S,_Y1 
+AATT,       4, ,   1,       0,  
+CMSEL,S,_Y  
+CMDELE,_Y   
+CMDELE,_Y1  
+!*  
+CM,_Y,AREA  
+ASEL, , , ,      49 
+CM,_Y1,AREA 
+CMSEL,S,_Y  
+!*  
+CMSEL,S,_Y1 
+AATT,       5, ,   1,       0,  
+CMSEL,S,_Y  
+CMDELE,_Y   
+CMDELE,_Y1  
+!*  
+CM,_Y,AREA  
+ASEL, , , ,      24 
+CM,_Y1,AREA 
+CMSEL,S,_Y  
+!*  
+CMSEL,S,_Y1 
+AATT,       6, ,   1,       0,  
+CMSEL,S,_Y  
+CMDELE,_Y   
+CMDELE,_Y1  
+!*  
+FLST,5,3,5,ORDE,3   
+FITEM,5,3   
+FITEM,5,23  
+FITEM,5,48  
+CM,_Y,AREA  
+ASEL, , , ,P51X 
+CM,_Y1,AREA 
+CMSEL,S,_Y  
+!*  
+CMSEL,S,_Y1 
+AATT,       7, ,   1,       0,  
+CMSEL,S,_Y  
+CMDELE,_Y   
+CMDELE,_Y1  
+!*  
+FLST,5,10,5,ORDE,6  
+FITEM,5,1   
+FITEM,5,-2  
+FITEM,5,6   
+FITEM,5,17  
+FITEM,5,-22 
+FITEM,5,28  
+CM,_Y,AREA  
+ASEL, , , ,P51X 
+CM,_Y1,AREA 
+CMSEL,S,_Y  
+!*  
+CMSEL,S,_Y1 
+AATT,       8, ,   1,       0,  
+CMSEL,S,_Y  
+CMDELE,_Y   
+CMDELE,_Y1  
+!*  
+ESIZE,0.01,0,   
+MSHKEY,0
+FLST,5,52,5,ORDE,2  
+FITEM,5,1   
+FITEM,5,-52 
+CM,_Y,AREA  
+ASEL, , , ,P51X 
+CM,_Y1,AREA 
+CHKMSH,'AREA'   
+CMSEL,S,_Y  
+!*  
+AMESH,_Y1   
+!*  
+CMDELE,_Y   
+CMDELE,_Y1  
+CMDELE,_Y2  
+!*  
+FINISH  
+/SOL
+LPLOT   
+FLST,2,1,4,ORDE,1   
+FITEM,2,18  
+/GO 
+!*  
+DL,P51X, ,VOLT,0
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/FOC,1,0.3,,,1  
+/REP,FAST   
+/FOC,1,0.3,,,1  
+/REP,FAST   
+/FOC,1,0.3,,,1  
+/REP,FAST   
+/FOC,1,0.3,,,1  
+/REP,FAST   
+/FOC,1,0.3,,,1  
+/REP,FAST   
+/FOC,1,,-0.3,,1 
+/REP,FAST   
+/FOC,1,,-0.3,,1 
+/REP,FAST   
+/FOC,1,,-0.3,,1 
+/REP,FAST   
+/FOC,1,,-0.3,,1 
+/REP,FAST   
+/FOC,1,,-0.3,,1 
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/DIST, 1 ,0.924021,1
+/REP,FAST   
+/FOC,1,,0.3,,1  
+/REP,FAST   
+/FOC,1,,0.3,,1  
+/REP,FAST   
+/FOC,1,,0.3,,1  
+/REP,FAST   
+/FOC,1,0.3,,,1  
+/REP,FAST   
+/FOC,1,0.3,,,1  
+/REP,FAST   
+/FOC,1,0.3,,,1  
+/REP,FAST   
+NPLOT   
+FLST,2,37,1,ORDE,3  
+FITEM,2,6487
+FITEM,2,6509
+FITEM,2,-6544   
+/GO 
+!*  
+F,P51X,AMPS,300000/26/4 
+/STATUS,SOLU
+SOLVE   
+FINISH  
+/POST1  
+!*  
+/EFACET,1   
+PLNSOL, VOLT,, 0
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/FOC,1,-0.3,,,1 
+/REP,FAST   
+/FOC,1,-0.3,,,1 
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+/DIST, 1 ,1.082226,1
+/REP,FAST   
+FINISH  
+/PREP7  
+!*  
+!*  
